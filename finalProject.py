@@ -177,10 +177,18 @@ def main():
         playerList = enterPath(path,playerList,round)
         if playerList[0]<=0:
             print("\nAfter scraping your way back to rest, you pass away from your injuries in your sleep (game over)")
+            print("File 'characterDeath.txt' has been created")
+            #you said I needed to read or write to a file and I wasnt paying attention to that fact while actually writing the game
+            #Honestly I should implement it as a way to save character data buuuuuuut, maybe later
+            fileOutput = open("characterDeath.txt","w+")
+            fileOutput.write("Haha you died")
             path = "quit"
         elif playerList[1]>=100000000000:
             print("\nYou have defeated an ancient evil, or are simply so rich and powerful it wouldn't dare appear before you")
             print("The rest of your days are lived out happily and in peace")
+            print("File 'characterWin.txt' has been created")
+            fileOutput = open("characterWin.txt","w+")
+            fileOutput.write("Congrats man")
             path = "quit"
         input("\npress enter to continue\n")
         
