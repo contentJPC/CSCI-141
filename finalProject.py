@@ -187,6 +187,7 @@ def main():
             print("\nYou have defeated an ancient evil, or are simply so rich and powerful it wouldn't dare appear before you")
             print("The rest of your days are lived out happily and in peace")
             print("File 'characterWin.txt' has been created")
+            #again, ouput to file for the sake of it :^)
             fileOutput = open("characterWin.txt","w+")
             fileOutput.write("Congrats man")
             path = "quit"
